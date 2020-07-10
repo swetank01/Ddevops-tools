@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    jenkins: #jenkins/alpine 
+        build:
+            context: .
+        volumes:
+            - $PWD/jenkins_home:/var/jenkins_home
+        ports:
+            - 9080:8080
+            - 9090:9090
