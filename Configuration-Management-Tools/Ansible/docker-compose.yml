@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  ansible:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ansible-server
+    command: tail -F /dev/null
+    ports:
+      - 7860:80
+    volumes:
+      - ./ansible_project:/home/
